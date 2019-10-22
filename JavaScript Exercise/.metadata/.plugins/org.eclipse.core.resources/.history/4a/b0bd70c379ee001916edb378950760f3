@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>pattern 2</title>
+</head>
+<body>
+<p style="line-height:18px; font-size:10px; font-family:arial;">
+<br>
+<script>
+ for (var i = 5; i >= 1; i--) {
+        for (var j = 1; j <= i; j++) {
+           document.write(i+"&nbsp;&nbsp;");
+        }
+        
+        document.write("</br>");
+    }
+    </script>
+    </p>
+</body>
+</html>

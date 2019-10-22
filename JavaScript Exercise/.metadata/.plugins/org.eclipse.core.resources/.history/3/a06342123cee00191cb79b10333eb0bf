@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- Array in Ascending Order -->
+<script>
+var array = new Array(90,10,30,40,5);
+        for(var i=0;i<array .length;i++) //Hold the first element
+    {
+        for(var j=i+1;j<array.length;j++) //Hold the next element from the first element
+        {
+            if(Number(array[i]) > Number(array[j])) //comparing first and next element
+            {
+                tempValue = array[j];   
+                array[j] = array[i];
+                array[i] = tempValue;
+            }
+        }
+    }
+        document.write(array);
+</script>
+
+<!-- Add new element in the middle of Array -->
+
+</body>
+</html>

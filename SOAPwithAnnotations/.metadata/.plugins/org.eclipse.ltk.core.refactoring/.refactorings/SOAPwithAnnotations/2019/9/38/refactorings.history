@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;WSPublisher.java&apos; to &apos;FaultDemo/src/com.hcl.fault&apos;&#x0D;&#x0A;- Original project: &apos;SOAPwithAnnotations&apos;&#x0D;&#x0A;- Destination element: &apos;FaultDemo/src/com.hcl.fault&apos;&#x0D;&#x0A;- Original element: &apos;com.hcl.soap.WSPublisher.java&apos;" description="Copy compilation unit" destination="=FaultDemo/src&lt;com.hcl.fault" element1="/src&lt;com.hcl.soap{WSPublisher.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1568889891268" units="1" version="1.0"/>
+</session>

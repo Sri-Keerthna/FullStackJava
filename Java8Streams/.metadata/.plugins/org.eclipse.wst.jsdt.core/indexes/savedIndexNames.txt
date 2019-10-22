@@ -1,0 +1,8 @@
+INDEX VERSION 1.3+D:\FullStackJava\Java8Streams\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+634422618.index
+2839191030.index
+825244922.index
+2765438383.index
+1812163209.index
+3378311251.index
+3007364347.index

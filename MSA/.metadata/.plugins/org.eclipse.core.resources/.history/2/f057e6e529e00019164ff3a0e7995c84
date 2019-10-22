@@ -1,0 +1,161 @@
+package com.div.demo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+@Service
+public class AccountServiceImpl implements AccountService{
+	
+	@Autowired
+	AccountRepository accountRepository;
+
+	@Override
+	public List<Account> getAllAccounts() {
+		List<Account> listAccount=(List<Account>) accountRepository.findAll();
+		if(listAccount.size()>0) {
+			return listAccount;
+		}else {
+			return new ArrayList<Account>();
+		}
+	}
+
+	@Override
+	public String addAccount(Integer userid) {
+		
+		JSONArray array=(JSONArray) JSONValue.parse(empStr); 
+		Account emp=new Account();
+		
+		 for(int i=0;i<array.size();i++)
+		 { 
+		JSONObject object=(JSONObject) array.get(i);
+    	long id = (long) object.get("id");  
+    	emp.setId((int) id);
+    	String name = (String) object.get("name");  
+    	emp.setName(name);
+	    double salary = (double) object.get("salary"); 
+	    emp.setSalary(salary);
+	}
+		 
+		Account tempEmp=accountRepository.save(emp);
+		if(tempEmp!=null) 
+		{
+		return "Account Successfully Created";
+		}else {
+		return "Not Created";
+		}
+	}
+
+	@Override
+	public String addAccounts(Integer userid) {
+		
+		JSONArray array=(JSONArray) JSONValue.parse(empStr); 
+		  
+	    List<Account> empList=new ArrayList<Account>();
+		
+		 for(int i=0;i<array.size();i++)
+		 { 
+				Account emp=new Account(); 
+		JSONObject object=(JSONObject) array.get(i);
+    	long id = (long) object.get("id");  
+    	emp.setId((int) id);
+    	String name = (String) object.get("name");  
+    	emp.setName(name);
+	    double salary = (double) object.get("salary"); 
+	    emp.setSalary(salary);
+	    empList.add(emp);
+	    }
+		 
+		 List<Account> list=(List<Account>) accountRepository.saveAll(empList);
+		if(list!=null) 
+		{
+		return "List of Account Added" ;
+		}else {
+		return "Not Added";
+		}
+	}
+
+	@Override
+	public String deleteAccount(int id) {
+		accountRepository.deleteById(id);
+		return "Account deleted";
+	   
+	}		
+
+
+	@Override
+	public String deleteAccounts(String empStr) {
+		
+		JSONArray array=(JSONArray) JSONValue.parse(empStr); 
+		  
+	    List<Account> empList=new ArrayList<Account>();
+		
+		 for(int i=0;i<array.size();i++)
+		 { 
+				Account emp=new Account(); 
+		JSONObject object=(JSONObject) array.get(i);
+    	long id = (long) object.get("id");  
+    	emp.setId((int) id);
+    	String name = (String) object.get("name");  
+    	emp.setName(name);
+	    double salary = (double) object.get("salary"); 
+	    emp.setSalary(salary);
+	    empList.add(emp);
+	    }
+		 
+		  accountRepository.deleteAll(empList);
+		  return "All records Deleted successfully";
+	}
+
+	@Override
+	public String updateAccount(String empStr) {
+		JSONArray array=(JSONArray) JSONValue.parse(empStr); 
+		Account emp=new Account();
+		
+		 for(int i=0;i<array.size();i++)
+		 { 
+		JSONObject object=(JSONObject) array.get(i);
+    	long id = (long) object.get("id");  
+    	emp=accountRepository.findById((int) id).get();
+    	if(emp!=null) {
+    	emp.setId((int) id);
+    	String name = (String) object.get("name");  
+    	emp.setName(name);
+	    double salary = (double) object.get("salary"); 
+	    emp.setSalary(salary);
+	}else {
+		return "Account does not exists";
+	}
+		 }
+		Account tempEmp=accountRepository.save(emp);
+		if(tempEmp!=null) 
+		{
+		return "Account Successfully Created";
+		}else {
+		return "Not Created";
+		}
+	}
+
+	@Override
+	public List<Account> updateAccounts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Account getAccount(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getAccountsByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

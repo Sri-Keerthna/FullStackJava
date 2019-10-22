@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>All Div in Equal Heights</title>
+<style>
+article {
+  float: left;
+  width: 23%;
+  background: #ccc;
+  margin: 10px 1%;
+  padding: 1%;
+}
+
+@media all and (max-width: 900px) {
+article {
+    width: 48%
+  }
+</style>
+</head>
+<body>
+<script>
+function equalHeights(className) {
+    var div = document.getElementsByTagName("div");
+    var tallest = 0;
+    // Loop over matching divs
+    for(i = 0; i < div.length; i++)
+    {
+        var ele = div[i];
+        var eleHeight = ele.offsetHeight;
+        tallest = (eleHeight>tallest ? eleHeight : tallest); /* look up ternary operator if you dont know what this is */
+    }
+    var findClass = document.getElementsByClassName(className);
+    for(i = 1; i < findClass.length; i++)
+    {
+        findClass[i].style.height = tallest + "px";
+    }
+}
+</script>
+<section class="main">
+  <article>Gally maroon schooner wench provost fathom haul wind parrel chantey brigantine.  </article>
+  <article>Ho six pounders Arr black spot port jib hogshead spirits bilge rat Admiral of the Black. Blow the man down measured fer yer chains hail-shot jolly boat gangway pillage lugsail wherry Jolly Roger Privateer. </article>
+  <article>Lass gangplank bilged on her anchor bring a spring upon her cable rigging lookout Admiral of the Black sheet wench rutters. </article>
+  </section>
+</body>
+</html>

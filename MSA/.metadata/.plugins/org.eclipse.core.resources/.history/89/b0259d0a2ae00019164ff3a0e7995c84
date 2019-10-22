@@ -1,0 +1,30 @@
+package com.div.demo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+@Service
+public class AccountServiceImpl implements AccountService{
+	
+	@Autowired
+	AccountRepository accountRepository;
+
+	@Override
+	public List<Account> getAllAccounts() {
+		List<Account> listAccount=(List<Account>) accountRepository.findAll();
+		if(listAccount.size()>0) {
+			return listAccount;
+		}else {
+			return new ArrayList<Account>();
+		}
+	}
+
+	public void addUser(Account account){  
+		accountRepository.save(account);  
+    }
+}

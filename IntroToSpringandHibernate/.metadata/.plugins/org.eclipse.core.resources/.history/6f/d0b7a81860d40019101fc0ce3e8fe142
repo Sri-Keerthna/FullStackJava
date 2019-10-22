@@ -1,0 +1,45 @@
+package com.hcl.dao;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.hcl.model.Student;
+
+@Repository
+public class StudentDAOImplement implements StudentDAO {
+
+	
+	@Autowired
+	private SessionFactory sessionFactory;
+
+	public void addStudent(Student student) {
+		sessionFactory.getCurrentSession().saveOrUpdate(student);
+		
+	}
+
+	public List<Student> getAllStudents() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void deleteStudent(Integer rollno) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Student updateStudent(Student student) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Student getStudent(int rollno) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

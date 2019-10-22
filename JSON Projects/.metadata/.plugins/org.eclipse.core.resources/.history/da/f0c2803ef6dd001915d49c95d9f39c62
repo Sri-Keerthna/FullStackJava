@@ -1,0 +1,64 @@
+package com.hcl.service;
+
+
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.hcl.dao.EmployeeDAO;
+import com.hcl.model.Employee;
+
+@Path("/employee")
+@Consumes(MediaType.APPLICATION_JSON)
+@Produces(MediaType.APPLICATION_JSON)
+public class EmployeeServiceImpl implements EmployeeService {
+
+
+	@Autowired
+	private EmployeeDAO employeeDAO;
+	
+	private static Map<Integer,Employee> emps = new HashMap<Integer,Employee>();
+	
+	@POST
+	@Override
+	@GET
+	@Path("/{id}/get")
+	public Employee getEmployee(@PathParam("id") int id) {
+		return employeeDAO.getEmployee(id);
+	}
+	
+	@GET
+	@Path("/{id}/getDummy")
+	public Employee getDummyEmployee(@PathParam("id") int id) {
+		Employee e = new Employee();
+		e.setSalary(8976.55);
+		e.setEmpname("Dummy");
+		e.setId(id);
+		return e;
+	}
+
+	@Override
+	@GET
+	@Path("/getAll")
+	public Employee[] getAllEmployees() {
+		Set<Integer> ids = employeeDAO.keySet();
+		Employee[] e = new Employee[ids.size()];
+		int i=0;
+		for(Integer id : ids){
+			e[i] = employeeDAO.getEmployee(id);
+			i++;
+		}
+		return e;
+	}
+
+}

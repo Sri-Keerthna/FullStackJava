@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Align Heights</title>
+<style type="text/css">
+#page{
+	width:70%;
+	margin:0 auto;
+}
+#boxcontainer section{
+	width:20%;
+	min-width:150px;
+	float:left;
+	margin:1%;
+	padding:4px;
+	background:lightpink;
+}
+</style>
+</head>
+<body>
+<div id="page">
+	<h1>Align heights on floating elements with js</h1>
+    <div id="boxcontainer">
+    	<section>
+        	<h2>box1</h2>
+            Nunc vel hendrerit lacus. Aliquam non lectus magna, nec volutpat lorem.
+        </section>
+        <section>
+        	<h2>box2</h2>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum congue mattis. Morbi dictum congue mattis. Nunc vel hendrerit lacus. Aliquam non lectus magna, nec volutpat lorem.
+        </section>
+        <section>
+        	<h2>box3</h2>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </section>
+    </div>
+</div>
+<script type="text/javascript">
+function alignHeights(){
+	var tallest = 0;
+	var thisHeight =0;
+	var theContainer = document.getElementById('boxcontainer');
+	var boxArray = theContainer.children;
+	for(var i = 0; i < boxArray.length; i++){
+		boxArray[i].style.height = 'auto';
+		thisHeight = boxArray[i].offsetHeight;
+		if(thisHeight > tallest){
+			tallest = thisHeight;
+		}
+	}
+	for(var i = 0; i < boxArray.length; i++){
+		boxArray[i].style.height = tallest+'px';
+	}
+}
+
+window.onload = alignHeights();
+window.onresize = function (){
+	setTimeout(alignHeights, 200);
+}
+</script>
+</body>
+</html>

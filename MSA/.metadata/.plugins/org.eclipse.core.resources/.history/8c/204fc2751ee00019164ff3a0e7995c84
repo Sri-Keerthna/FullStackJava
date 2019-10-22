@@ -1,0 +1,21 @@
+package com.div.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+
+@RestController
+public class AccountController {
+
+	@Autowired
+	AccountRepository accountRepository;
+	
+	@RequestMapping("/account/{userid}")
+	public Account byusername(@PathVariable("userid") Integer userid) {
+		Account userId = accountRepository.getAccountByUserid(userid);
+		return userId;
+	}
+}

@@ -1,0 +1,122 @@
+package com.sri.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.sri.model.Employee;
+import com.sri.repository.EmployeeRepository;
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService{
+	
+	@Autowired
+	EmployeeRepository empRepository;
+
+	@Override
+	public List<Employee> getAllEmployees() {
+		List<Employee> listEmployee=(List<Employee>) empRepository.findAll();
+		if(listEmployee.size()>0) {
+			return listEmployee;
+		}else {
+			return new ArrayList<Employee>();
+		}
+	}
+
+	@Override
+	public String addEmployee(String empStr) {
+		
+		JSONArray array=(JSONArray) JSONValue.parse(empStr); 
+		Employee emp=new Employee();
+		
+		 for(int i=0;i<array.size();i++)
+		 { 
+		JSONObject object=(JSONObject) array.get(i);
+    	long id = (long) object.get("id");  
+    	emp.setId((int) id);
+    	String name = (String) object.get("name");  
+    	emp.setName(name);
+	    double salary = (double) object.get("salary"); 
+	    emp.setSalary(salary);
+	}
+		 
+		Employee tempEmp=empRepository.save(emp);
+		if(tempEmp!=null) 
+		{
+		return "Employee Successfully Created";
+		}else {
+		return "Not Created";
+		}
+	}
+
+	@Override
+	public List<Employee> addEmployees(String empStr) {
+		
+		JSONArray array=(JSONArray) JSONValue.parse(empStr); 
+		  
+	    ArrayList<Employee> empList=new ArrayList<Employee>();
+		
+		 for(int i=0;i<array.size();i++)
+		 { 
+				Employee emp=new Employee(); 
+		JSONObject object=(JSONObject) array.get(i);
+    	long id = (long) object.get("id");  
+    	emp.setId((int) id);
+    	String name = (String) object.get("name");  
+    	emp.setName(name);
+	    double salary = (double) object.get("salary"); 
+	    emp.setSalary(salary);
+	}
+		 
+		Employee tempEmp=(Employee) empRepository.saveAll(empList);
+		if(tempEmp!=null) 
+		{
+		return empList ;
+		}else {
+		return null;
+		}
+	}
+
+	@Override
+	public Employee deleteEmployee(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Employee> deleteEmployees() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employee updateEmployee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Employee> updateEmployees() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employee getEmployee(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getEmployeesByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+}

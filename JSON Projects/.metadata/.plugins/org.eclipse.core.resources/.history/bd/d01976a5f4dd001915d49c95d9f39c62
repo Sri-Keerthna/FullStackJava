@@ -1,0 +1,38 @@
+package com.hcl.dao;
+
+import java.util.List;
+
+@Repository
+public class EmployeeDAOImpl implements EmployeeDAO {
+
+	@Autowired
+	private SessionFactory sessionFactory;
+	
+	@Override
+	public void addEmployee(int i,Employee e) {
+		sessionFactory.getCurrentSession().saveOrUpdate(e);
+	}
+
+	@Override
+	public void deleteEmployee(int id) {
+		Employee Employee = (Employee) sessionFactory.getCurrentSession().load(
+				Employee.class, id);
+		if (null != Employee) {
+			this.sessionFactory.getCurrentSession().delete(Employee);
+		}
+
+	}
+
+	@Override
+	public Employee getEmployee(int id) {
+		return (Employee) sessionFactory.getCurrentSession().get(
+				Employee.class, id);
+	}
+
+	@SuppressWarnings("unchecked")
+	public List<Employee> getAllEmployees() {
+		return sessionFactory.getCurrentSession().createQuery("from Employee")
+				.list();
+	}
+
+}

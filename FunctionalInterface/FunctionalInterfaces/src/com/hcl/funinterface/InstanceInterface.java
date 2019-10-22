@@ -1,0 +1,9 @@
+package com.hcl.funinterface;
+
+@FunctionalInterface
+public interface InstanceInterface {
+
+	//we are having same return type as void and there is no parameters in both cls and interface...
+	//it will help in mapping
+	public void myInterface();
+}

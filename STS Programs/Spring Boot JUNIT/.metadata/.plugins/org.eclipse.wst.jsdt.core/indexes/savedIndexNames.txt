@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+D:\STS Programs\Spring Boot JUNIT\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2063407653.index
+1671012270.index
+2541605709.index
+4211158151.index
+3370637950.index
+295876878.index

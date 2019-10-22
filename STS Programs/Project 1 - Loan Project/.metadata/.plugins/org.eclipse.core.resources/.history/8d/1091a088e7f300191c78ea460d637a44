@@ -1,0 +1,30 @@
+package com.sri;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.client.RestTemplate;
+
+public class RemoteUserRepository implements ClientUserRepository {
+
+	@Autowired
+	protected RestTemplate restTemplate;
+	
+protected String serviceUrl;
+	
+	public RemoteUserRepository(String serviceUrl) {
+		this.serviceUrl = serviceUrl.startsWith("http") ? serviceUrl
+				: "http://" + serviceUrl;
+	}
+	
+	@Override
+	public User byusername(String username) {
+		return restTemplate.getForObject(serviceUrl+"/user/{username}", User.class, username);
+		 
+	}
+
+	@Override
+	public int login(User user) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}

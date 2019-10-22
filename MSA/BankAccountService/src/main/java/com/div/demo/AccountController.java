@@ -1,0 +1,45 @@
+package com.div.demo;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+
+
+@RestController
+public class AccountController {
+
+	@Autowired
+	AccountService accountService;
+	
+	 @RequestMapping("/account/{userid}")
+	 public List<Account> byUserid(@PathVariable("userid")Integer userid){
+		 List<Account> accList=accountService.getAccountByuserid(userid);
+		 return accList;
+	 }
+	 
+	 @RequestMapping(value="/addaccount", method=RequestMethod.POST)  
+	    public void addAccount(@RequestBody Account account){  
+		 accountService.addAccount(account);  
+	    }  
+	 
+	 @RequestMapping(value="/getaccount/{accountnum}", method=RequestMethod.GET)  
+	    public Account getAccountDetails(@PathVariable Integer accountnum){  
+	        return accountService.getAccountDetails(accountnum);  
+	    }  
+	 
+	 @RequestMapping(value="/deleteaccount/{accountnum}", method=RequestMethod.GET)  
+	    public String deleteAccount(@PathVariable Integer accountnum){  
+	        return accountService.deleteAccount(accountnum);  
+	    } 
+	 
+	 @RequestMapping(value="/getaccountbyId/{userid}", method=RequestMethod.GET)  
+	    public List<Account> getAccountByuserid(@PathVariable Integer accId){  
+	        return accountService.getAccountByuserid(accId);  
+	    }
+}

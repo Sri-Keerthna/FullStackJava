@@ -1,0 +1,32 @@
+package com.div.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+
+
+@RestController
+public class AccountController {
+
+	@Autowired
+	AccountService accountService;
+	
+	 @RequestMapping(value="/addaccount", method=RequestMethod.POST)  
+	    public void addUser(@RequestBody Account account){  
+		 accountService.addUser(account);  
+	    }  
+	 
+	 @RequestMapping(value="/getaccount/{accountnum}", method=RequestMethod.GET)  
+	    public Account getUser(@PathVariable Integer accountnum){  
+	        return accountService.getUser(accountnum).get();  
+	    }  
+	 
+	 @RequestMapping(value="/deleteaccount/{accountnum}", method=RequestMethod.GET)  
+	    public String deleteUser(@PathVariable Integer accountnum){  
+	        return accountService.deleteUser(accountnum);  
+	    } 
+}

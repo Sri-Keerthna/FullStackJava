@@ -1,0 +1,23 @@
+package com.sri.demo;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+@RestController
+public class UserController {
+
+	@Autowired
+	UserRepository userRepository;
+	
+	@RequestMapping("/user/{username}")
+	public User byusername(@PathVariable("username") String username) {
+		User userName = userRepository.getUserByUsername(username);
+		return userName;
+	}
+	
+}

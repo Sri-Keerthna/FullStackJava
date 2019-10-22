@@ -1,0 +1,10 @@
+INDEX VERSION 1.3+D:\FullStackJava\RESTfulDemo\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3993285722.index
+1318766783.index
+920940452.index
+491517653.index
+2888986771.index
+2004974124.index
+501332057.index
+4157513118.index
+382529562.index

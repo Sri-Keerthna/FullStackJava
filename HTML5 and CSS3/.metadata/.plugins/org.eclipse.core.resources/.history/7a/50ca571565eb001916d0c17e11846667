@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Strict//EN">
+
+<head>
+	<title>All Four Corners</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<style>
+.center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+</style>
+</head>
+
+<body>
+
+	<div id="upper_left"></div>
+	<div id="upper_right"></div>
+	<div id="lower_left"></div>
+	<div id="lower_right"></div>
+	<div class="center">
+  <p><b>Note: </b>Using margin:auto will not work in IE8, unless a !DOCTYPE is declared.</p>
+</div>
+	<div id="page_wrap">
+	
+	</div>
+
+</body>
+
+</html>

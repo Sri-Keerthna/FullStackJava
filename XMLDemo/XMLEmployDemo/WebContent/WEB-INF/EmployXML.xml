@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="Employee.xsd">
+
+	<emp>
+		<empno>21</empno>
+		<name>Madhu</name>
+		<salary>15000</salary>
+		<band>M</band>
+		<doj>2020-05-23</doj>
+	</emp>
+
+	<emp>
+		<empno>17</empno>
+		<name>Soundarraj</name>
+		<salary>9000</salary>
+		<band>C</band>
+		<doj>2020-06-17</doj>
+	</emp>
+
+	<emp>
+		<empno>1</empno>
+		<name>Sri</name>
+		<salary>10000</salary>
+		<band>E</band>
+		<doj>2020-09-22</doj>
+	</emp>
+
+</employee>

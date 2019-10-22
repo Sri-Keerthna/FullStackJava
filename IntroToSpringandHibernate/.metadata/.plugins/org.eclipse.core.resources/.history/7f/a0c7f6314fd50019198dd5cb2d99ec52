@@ -1,0 +1,35 @@
+package com.jwt.model;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "exam")
+
+public class Exam implements Serializable {
+private int sid;
+private String subname;
+private int marks;
+public int getSid() {
+	return sid;
+}
+public void setSid(int sid) {
+	this.sid = sid;
+}
+public String getSubname() {
+	return subname;
+}
+public void setSubname(String subname) {
+	this.subname = subname;
+}
+public int getMarks() {
+	return marks;
+}
+public void setMarks(int marks) {
+	this.marks = marks;
+}
+
+
+}

@@ -1,0 +1,23 @@
+package com.hcl.encode;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Main {
+
+	public static void main(String[] args) throws IOException {
+		
+		try {
+			String strCurrentLine;
+			BufferedReader br=new BufferedReader(new FileReader("D://FullStackJava/JSON Projects/JsonEncode/employees.json"));
+			while ((strCurrentLine = br.readLine()) != null) {
+			    System.out.println(br);
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

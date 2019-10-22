@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 3px solid #ffffff;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: lightgreen;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: grey;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<table id="customers">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Major</th>
+  </tr>
+  <tr>
+    <td> 1001</td>
+    <td>Gopl Murthy</td>
+    <td>Physics</td>
+  </tr>
+ <tr>
+    <td> 1002</td>
+    <td>Joy Sen</td>
+    <td>English</td>
+  </tr>
+  <tr>
+    <td> 1003</td>
+    <td>Chandru</td>
+    <td>Maths</td>
+  </tr>
+  <tr>
+    <td> 1004</td>
+    <td>Shalini</td>
+    <td>Chemistry</td>
+  </tr>
+  <tr>
+    <td> 1005</td>
+    <td>Vivek</td>
+    <td>Biology</td>
+  </tr>
+ 
+</table>
+
+</body>
+</html>

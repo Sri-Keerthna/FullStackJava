@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>New Account</title>
+</head>
+<body>
+        <div align="center">
+        <form:form action="saveUser" modelAttribute="user" method="post" >
+			<h1>Personal Details</h1>
+			<table border="1">
+            <tr>
+                <td>Name</td>
+                <td><form:input path="username" /></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td><form:radiobutton path="gender">Male</form:radiobutton>
+                <td><form:radiobutton path="gender">Female</form:radiobutton>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><form:input path="address" /></td>
+            </tr>
+             <tr>
+                <td>Contact no</td>
+                <td><form:input path="contactno" /></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="Save"></td>
+            </tr>
+			</table>
+		</form:form>
+	</div>
+    </body>
+</html>

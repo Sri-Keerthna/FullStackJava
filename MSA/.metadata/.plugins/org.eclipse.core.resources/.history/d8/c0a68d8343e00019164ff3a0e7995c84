@@ -1,0 +1,15 @@
+package com.div.demo;
+
+import java.util.List;
+import java.util.Optional;
+
+
+public interface AccountService {
+
+	public void addUser(Account account);
+
+	public Optional<Account> getUser(Integer accountnum);
+
+	public Optional<Account> deleteUser(Integer accountnum);
+
+}

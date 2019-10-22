@@ -1,0 +1,66 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@taglib uri="http://www.springframework.org/tags/form" prefix="SpringForm" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Student Details</title>
+<style>
+.error{
+color: #ff0000;
+font-style: italic;
+font-weight: bold;
+}
+</style>
+</head>
+<body>
+<SpringForm:form method="POST" commandName="Student" action="/addStudent">
+<tr>
+<th>Roll No:</th>
+<td><SpringForm:input path="rollno"/></td>
+<td><SpringForm:error path="rollno"></SpringForm:error></td>
+</tr>
+
+<tr>
+<th>Student Name :</th>
+<td><SpringForm:input path="sname"/>
+<SpringForm:error path="sname"></SpringForm:error></td>
+</tr>
+
+<tr>
+<th>Age :</th>
+<td><SpringForm:input path="age"/>
+<SpringForm:error path="age"></SpringForm:error></td>
+</tr>
+
+<tr>
+<th>Gender</th>
+<td><SpringForm:input path="gender"/>
+<SpringForm:error path="gender"></SpringForm:error></td>
+</tr>
+
+<tr>
+<th>Country :</th>
+<td><SpringForm:input path="country"/>
+
+<SpringForm:option type="India">India</SpringForm:option>
+<SpringForm:option type="America">America</SpringForm:option>
+<SpringForm:option type="SriLanka">SriLanka</SpringForm:option>
+</tr>
+
+<tr>
+<th>DOJ :</th>
+<td><SpringForm:input path="doj"/>
+<SpringForm:error path="doj"></SpringForm:error></td>
+</tr>
+
+<tr>
+<th>FinalScore :</th>
+<td><SpringForm:input path="finalscore"/>
+<SpringForm:error path="finalscore"></SpringForm:error></td>
+</tr>
+
+</SpringForm:form>
+</body>
+</html>

@@ -1,0 +1,7 @@
+package com.hcl.funinterface;
+
+@FunctionalInterface
+public interface MethodInterface {
+
+	public void someMethod(String name);
+}

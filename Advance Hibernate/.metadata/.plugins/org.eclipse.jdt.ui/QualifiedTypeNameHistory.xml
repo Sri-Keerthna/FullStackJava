@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.sri.Employee"/>
+<fullyQualifiedTypeName name="org.hibernate.annotations.NamedQuery"/>
+<fullyQualifiedTypeName name="javax.persistence.NamedNativeQueries"/>
+<fullyQualifiedTypeName name="javax.persistence.NamedNativeQuery"/>
+<fullyQualifiedTypeName name="org.hibernate.annotations.NamedQueries"/>
+<fullyQualifiedTypeName name="org.hibernate.annotations.NamedNativeQueries"/>
+<fullyQualifiedTypeName name="org.hibernate.annotations.NamedNativeQuery"/>
+<fullyQualifiedTypeName name="javax.persistence.NamedQueries"/>
+<fullyQualifiedTypeName name="javax.persistence.NamedQuery"/>
+<fullyQualifiedTypeName name="org.hibernate.Query"/>
+<fullyQualifiedTypeName name="com.journaldev.hibernate.model.Employee"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,92 @@
+package com.sri.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.sri.model.Employee;
+import com.sri.repository.EmployeeRepository;
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService{
+	
+	@Autowired
+	EmployeeRepository empRepository;
+
+	@Override
+	public List<Employee> getAllEmployees() {
+		List<Employee> listEmployee=(List<Employee>) empRepository.findAll();
+		if(listEmployee.size()>0) {
+			return listEmployee;
+		}else {
+			return new ArrayList<Employee>();
+		}
+	}
+
+	@Override
+	public String addEmployee(String empStr) {
+		
+		JSONObject obj=(JSONObject)JSONValue.parse();   
+	    String name = (String) obj.get("name");  
+	    double salary = (Double) obj.get("salary");  
+	    int id = (int) obj.get("id");  
+	    System.out.println(name+" "+salary+" "+age);  
+		Employee emp=new Employee();
+		Employee tempEmp=empRepository.save(emp);
+		if(tempEmp!=null) 
+		{
+		return "Employee Successfully Created";
+		}else {
+		return "Not Created";
+		}
+	}
+
+	@Override
+	public List<Employee> addEmployees() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employee deleteEmployee(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Employee> deleteEmployees() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employee updateEmployee() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Employee> updateEmployees() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Employee getEmployee(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getEmployeesByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+
+}

@@ -1,0 +1,12 @@
+package com.sri.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class EmployeeServiceImpl implements EmployeeService{
+	
+	@Autowired
+	EmployeeService empService;
+	
+	
+
+}

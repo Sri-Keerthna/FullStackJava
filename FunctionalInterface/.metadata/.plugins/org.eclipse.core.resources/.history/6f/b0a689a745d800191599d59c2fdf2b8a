@@ -1,0 +1,18 @@
+package com.hcl.funinterface;
+
+import java.util.function.Consumer;
+
+public class MethodMain {
+
+	public static void main(String[] args) {
+		
+		MethodInterface obj1=(a)->{System.out.println(a);};
+		obj1.someMethod("HCL");
+		
+		MethodInterface obj2= System.out::println;
+		obj2.someMethod("Java 8");
+		
+		Consumer< String> consumer=System.out::println;
+		consumer.accept("Bye");
+	}
+}

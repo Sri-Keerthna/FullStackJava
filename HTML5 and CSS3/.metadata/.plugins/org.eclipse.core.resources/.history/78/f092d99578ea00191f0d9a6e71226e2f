@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<center>
+<h1>Registration Form</h1>
+<table>
+<th>Name :</th>
+<tr><input type="text" name="name"/><br/><br/></tr>
+<th>Age :</th>
+<tr><input type="text" name="age"/><br/><br/></tr>
+<th>Gender :</th>
+<tr><input type="text" name="gender"/><br/><br/></tr>
+<th>Address :</th>
+<tr><input type="text" name="address"/><br/><br/></tr>
+<th>Email :</th>
+<tr><input type="text" name="email"/><br/><br/></tr>
+<th>Contact No :</th>
+<tr><input type="text" name="contactno"/><br/><br/></tr>
+<tr><input type="submit" value="Submit"/><br/><br/></tr>
+</body>
+</center>
+</html>

@@ -1,0 +1,13 @@
+package com.sri;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+
+
+public interface EmployeeDAO extends CrudRepository {
+
+	public List<Employee> getAllEmployees();
+
+}

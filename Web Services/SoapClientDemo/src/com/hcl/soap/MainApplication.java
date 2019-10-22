@@ -1,0 +1,22 @@
+package com.hcl.soap;
+
+import java.rmi.RemoteException;
+
+
+public class MainApplication {
+	public static void main(String[] args) {
+		int res=0;
+		CalculatorProxy calculatorProxy=new CalculatorProxy();
+		try {
+			res=calculatorProxy.mul(2, 4);
+			System.out.println("Mul is : "+res);
+			
+			res=calculatorProxy.add(2, 4);
+			System.out.println("add is : "+res);
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	
+		
+	}
+}

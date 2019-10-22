@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>All Div in Equal Heights</title>
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	width: 100%;
+	min-height: 100vh;
+	background: linear-gradient(to top right, #060628, #1F245A, #682359);
+	padding: 20px;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+.container{
+	text-align: center;
+}
+
+nav{
+	width: 100%;
+	text-align: center;
+	padding-bottom: 40px;
+	color: white;
+	padding-top: 20px;
+	font-size: 30px;
+	
+	span{
+		opacity: .5;
+	}
+}
+
+[data-match-height]{
+	background-color: white;
+	padding: 20px;
+	display: inline-block;
+	width: 30%;
+	margin: 0 1%;
+	vertical-align: top;
+	text-align: left;
+	border-radius: 3px;
+	line-height: 22px;
+}
+</style>
+
+</head>
+<body>
+<nav role='navigation'>
+  Equal height <span>by Lewi Hussey</span>
+</nav>
+
+<script>
+var matchHeight = function () {
+	
+	function init() {
+		eventListeners();
+		matchHeight();
+	}
+	
+	function eventListeners(){
+		$(window).on('resize', function() {
+			matchHeight();
+		});
+	}
+	
+	function matchHeight(){
+		var groupName = $('[data-match-height]');
+		var groupHeights = [];
+		
+		groupName.css('min-height', 'auto');
+		
+		groupName.each(function() {
+			groupHeights.push($(this).outerHeight());
+		});
+		
+		var maxHeight = Math.max.apply(null, groupHeights);
+		groupName.css('min-height', maxHeight);
+	};
+	
+	return {
+		init: init
+	};
+	
+} ();
+
+$(document).ready(function() {
+	matchHeight.init();
+});
+</script>
+
+<div class="container">
+	<div data-match-height="groupName">
+	This block is smaller than the last, yet it has the same height as the last.
+	</div>
+
+	<div data-match-height="groupName">
+		This block is smaller than the last, yet it has the same height as the last.
+	</div>
+
+	<div data-match-height="groupName">
+		This is the text of the largest container.<br/>
+		It will force the height of all the other blocks to match the height of this block.<br/>
+		It even works when you resize your browser!
+	</div>
+</div>
+</body>
+</html>

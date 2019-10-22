@@ -1,0 +1,12 @@
+package com.div.demo;
+
+import java.util.List;
+
+
+public interface AccountService {
+
+	public void addUser(Account account);
+
+	public Account findAccountByUserid(Integer userid);
+
+}

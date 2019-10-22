@@ -1,0 +1,28 @@
+package com.hcl.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.hcl.dao.StudentDAO;
+import com.hcl.model.Student;
+
+public class StudentServiceImpl {
+
+	@Autowired
+	StudentDAO dao;
+	
+	/*going to call the DAO class*/
+	public String addStudent(Student s){
+		return dao.addStudent(s);
+		
+	}
+	public List<Student> getStudent(int rollno){
+		return dao.getStudent(rollno);
+		
+	}
+	public List<Student> updateStudent(Student s){
+		return dao.updateStudent(s);
+		
+	}
+}

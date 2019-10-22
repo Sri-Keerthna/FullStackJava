@@ -1,0 +1,11 @@
+package com.hcl.service;
+
+import java.util.List;
+
+import com.hcl.model.AddStudent;
+
+public interface StudentManager {
+	public String addStudent(AddStudent s);
+	public List<AddStudent> getStudent(int rollno);
+	public String<AddStudent> updateStudent(AddStudent s);
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Align Heights</title>
+<style type="text/css">
+#page{
+	width:70%;
+	margin:0 auto;
+}
+#boxcontainer section1{
+	width:20%;
+	min-width:150px;
+	float:left;
+	margin:0%;
+	padding:4px;
+	background:lightpink;
+}
+section2{
+	width:20%;
+	min-width:150px;
+	float:left;
+	margin:0%;
+	padding:4px;
+	background:lightblue;
+}
+section3{
+	width:20%;
+	min-width:150px;
+	float:left;
+	margin:0%;
+	padding:4px;
+	background:lightgreen;
+}
+</style>
+</head>
+<body>
+<div id="page">
+    <div id="boxcontainer">
+    	<section1>
+            The Burj Khalifa, Arabic for "Khalifa Tower", known as the Burj Dubai prior to its inauguration in 2010, is a skyscraper in Dubai, 
+            United Arab Emirates. With a total height of 829.8 m (2,722 ft) and a roof height (excluding antenna) of 828 m (2,717 ft),
+             the Burj Khalifa has been the tallest structure and building in the world since its topping out in 2009.
+        </section1>
+        <section2>
+            The iconic sail-shaped silhoutte of Burj Al Arab Jumeirah stands tall as a beacon of modern Dubai, 
+            characterized by the finest hospitality you can ever experience.
+        </section2>
+        <section3>
+            The Dubai Mall is a shopping mall in Dubai.
+             It is the second-largest mall in the world by total land area, 
+             and the 26th-largest shopping mall in the world by  gross leasable area.
+        </section3>
+    </div>
+</div>
+<script type="text/javascript">
+function alignHeights(){
+	var tallest = 0;
+	var thisHeight =0;
+	var theContainer = document.getElementById('boxcontainer');
+	var boxArray = theContainer.children;
+	for(var i = 0; i < boxArray.length; i++){
+		boxArray[i].style.height = 'auto';
+		thisHeight = boxArray[i].offsetHeight;
+		if(thisHeight > tallest){
+			tallest = thisHeight;
+		}
+	}
+	for(var i = 0; i < boxArray.length; i++){
+		boxArray[i].style.height = tallest+'px';
+	}
+}
+
+window.onload = alignHeights();
+window.onresize = function (){
+	setTimeout(alignHeights, 200);
+}
+</script>
+</body>
+</html>

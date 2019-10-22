@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.function.BiFunction"/>
+<fullyQualifiedTypeName name="com.hcl.funinterface.Calculator"/>
+<fullyQualifiedTypeName name="com.hcl.funinterface.MethodMain"/>
+<fullyQualifiedTypeName name="com.hcl.funinterface.MethodInterface"/>
+<fullyQualifiedTypeName name="java.util.function.Consumer"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="com.hcl.funinterface.MethodStaticMain"/>
+<fullyQualifiedTypeName name="com.hcl.funinterface.MethodReferenceStatic"/>
+<fullyQualifiedTypeName name="com.hcl.funinterface.InstanceMethodReference"/>
+<fullyQualifiedTypeName name="com.hcl.funinterface.InstanceInterface"/>
+<fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
+<fullyQualifiedTypeName name="com.hcl.funinterface.EmployInterface"/>
+<fullyQualifiedTypeName name="com.hcl.funinterface.EmpInf1"/>
+<fullyQualifiedTypeName name="com.hcl.funinterface.EmpInf2"/>
+<fullyQualifiedTypeName name="com.hcl.funinterface.Employee"/>
+</qualifiedTypeNameHistroy>

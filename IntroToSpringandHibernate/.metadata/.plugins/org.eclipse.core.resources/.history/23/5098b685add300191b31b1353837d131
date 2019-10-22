@@ -1,0 +1,32 @@
+package com.hcl.dao;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.hcl.model.AddStudent;
+
+public class StudentDAOImplement implements StudentDAO {
+
+	public String addStudent(AddStudent s) {
+		SessionFactory sf=HibernateUtil.getConnection();
+		Session s=sf.openSession();
+		Transaction t= s.beginTransaction();
+		s.save(s);
+		t.commit();
+		return "Record Inserted...";
+	}
+
+	public List<AddStudent> getStudent(AddStudent s) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public List<AddStudent> insertStudent(AddStudent s) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

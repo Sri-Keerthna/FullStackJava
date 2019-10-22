@@ -1,0 +1,12 @@
+package com.hcl.dao;
+
+import java.util.List;
+
+import com.hcl.model.AddStudent;
+
+public interface StudentDAO {
+
+	public String addStudent(AddStudent s);
+	public List<AddStudent> getStudent(AddStudent s);
+	public List<AddStudent> updateStudent(AddStudent s);
+}

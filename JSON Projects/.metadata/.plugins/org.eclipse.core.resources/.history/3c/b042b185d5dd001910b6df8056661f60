@@ -1,0 +1,39 @@
+package com.hcl.encode;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.sql.Date;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+
+public class Main {
+
+	@SuppressWarnings("unchecked")
+	public static void main(String[] args) throws IOException {
+		
+		BufferedReader br=null;
+		 String str = "";
+		
+		try {
+			 br=new BufferedReader(new FileReader("D://FullStackJava/JSON Projects/JsonEncode/employees.json"));
+			
+			    Object obj=JSONValue.parse(str);  
+			    JSONObject jsonObject = (JSONObject) obj;
+			    JSONArray jsonarray=obj.getJS
+			  for(int i=0;i<3;i++){
+			    String name = (String) jsonObject.get("name");  
+			    double salary = (Double) jsonObject.get("salary");  
+			    String band = (String) jsonObject.get("band");  
+			    Date doj=(Date)jsonObject.get("doj");
+			    System.out.println(name+" "+salary+" "+band+" "+doj);  
+			  }
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

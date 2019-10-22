@@ -1,0 +1,27 @@
+package com.hcl.json;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+public class JsonArray {
+
+	public static void main(String[] args) {
+		 
+		JSONArray arr = new JSONArray();  
+		  arr.add("sri");    
+		  arr.add(new Integer(22));    
+		  arr.add(new Double(600000));   
+		  System.out.print(arr);  
+		  
+		  JSONObject obj=new JSONObject(); 
+		  for(int i=1;i<=1;i++)
+		  {
+		  
+		  JSONArray arr1 = new JSONArray();  
+		  arr.add("soundarraj");    
+		  arr.add(new Integer(22));    
+		  arr.add(new Double(800000));   
+		  System.out.print(arr1);  
+	}
+	}
+}

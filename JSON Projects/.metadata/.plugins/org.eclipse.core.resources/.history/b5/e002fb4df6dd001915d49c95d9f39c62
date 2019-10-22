@@ -1,0 +1,14 @@
+package com.hcl.dao;
+
+import java.util.List;
+
+import com.hcl.model.Employee;
+
+
+public interface EmployeeDAO {
+
+	public Employee getEmployee(int id);
+	
+	public List<Employee> getAllEmployees();
+
+}

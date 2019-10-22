@@ -1,0 +1,6 @@
+package com.sri.demo;
+
+public interface UserRepository {
+
+	public User getUserByUserName(String username);
+}

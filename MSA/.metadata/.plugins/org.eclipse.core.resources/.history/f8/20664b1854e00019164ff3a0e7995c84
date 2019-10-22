@@ -1,0 +1,9 @@
+package com.sugu.demo;
+
+public interface AccountRepository {
+
+	Account getUser(Integer accountnum);
+
+	Account addUser(Account account);
+
+}

@@ -1,0 +1,26 @@
+package com.div.demo;
+
+import java.util.List;
+
+
+public interface AccountService {
+
+	public List<Account> getAllAccounts();
+	
+	public String addAccount(Integer userid);
+	
+	public String addAccounts(Integer userid);
+	
+	public String deleteAccount(Integer userid);
+	
+	public String deleteAccounts(Integer userid);
+	
+	public String updateAccount(Integer userid);
+	
+	public List<Account> updateAccounts();
+	
+	public Account getAccount(Integer userid);
+	
+	public String getAccountsByName(Integer userid);
+
+}

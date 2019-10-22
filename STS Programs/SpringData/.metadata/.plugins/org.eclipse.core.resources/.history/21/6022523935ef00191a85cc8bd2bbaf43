@@ -1,0 +1,63 @@
+package com.sri;
+
+import java.io.IOException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+
+@RestController
+public class EmployeeController {
+
+	@Autowired
+	private EmployeeRepository dao;
+
+	@RequestMapping(value = "/")
+	public ModelAndView getEmployees(ModelAndView model) throws IOException {
+		ModelAndView mv=new ModelAndView();
+		mv.addObject("employeeList", dao.findAll());
+		mv.setViewName("home");
+		return mv;
+	}
+	
+	@RequestMapping(value = "/displayjavacontractors")
+	public ModelAndView getDeptandDesig(ModelAndView model) throws IOException {
+		ModelAndView mv=new ModelAndView();
+		mv.addObject("employeeList", dao.findByDeptAndDesig("java", "developer"));
+		mv.setViewName("home");
+		return mv;
+	}
+	
+	@RequestMapping(value = "/displayjavaEmployees")
+	public ModelAndView getProgrammer(ModelAndView model) throws IOException {
+		ModelAndView mv=new ModelAndView();
+		mv.addObject("employeeList", dao.findByDeptAndDesig("dotnet", "programmer"));
+		mv.setViewName("home");
+		return mv;
+	}
+	
+	@RequestMapping(value = "/displayjavaEngineers")
+	public ModelAndView getjavaSE(ModelAndView model) throws IOException {
+		ModelAndView mv=new ModelAndView();
+		mv.addObject("employeeList", dao.findByDeptAndDesig("CSE", "SE"));
+		mv.setViewName("home");
+		return mv;
+	}
+	
+	@RequestMapping(value = "/displaymoreBasic")
+	public ModelAndView getmoreBasic(ModelAndView model) throws IOException {
+		ModelAndView mv=new ModelAndView();
+		mv.addObject("employeeList", dao.findByBasic("CSE", "SE",5000));
+		mv.setViewName("home");
+		return mv;
+	}
+	
+	@RequestMapping(value = "/displaylessBasic")
+	public ModelAndView getlessBasic(ModelAndView model) throws IOException {
+		ModelAndView mv=new ModelAndView();
+		mv.addObject("employeeList", dao.findByBasicandName(5000));
+		mv.setViewName("home");
+		return mv;
+	}
+}

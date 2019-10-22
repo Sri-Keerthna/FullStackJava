@@ -1,0 +1,7 @@
+package com.hcl.lambda;
+
+public class MyImplements {
+public static void main(String[] args) {
+	new MyInterfaceImpl().priuntHello();
+}
+}

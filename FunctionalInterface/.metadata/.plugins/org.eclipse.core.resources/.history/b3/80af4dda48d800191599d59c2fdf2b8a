@@ -1,0 +1,6 @@
+package com.hcl.funinterface;
+
+public interface InstanceInterface {
+
+	public void myInterface();
+}

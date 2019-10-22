@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>All Div in Equal Heights</title>
+<style>
+article {
+  float: left;
+  width: 23%;
+  background: #ccc;
+  margin: 10px 1%;
+  padding: 1%;
+}
+
+@media all and (max-width: 900px) {
+article {
+    width: 48%
+  }
+</style>
+</head>
+<body>
+<script>
+equalheight = function(container){
+
+	var currentTallest = 0,
+	     currentRowStart = 0,
+	     rowDivs = new Array(),
+	     $el,
+	     topPosition = 0;
+	 $(container).each(function() {
+
+	   $el = $(this);
+	   $($el).height('auto')
+	   topPostion = $el.position().top;
+
+	   if (currentRowStart != topPostion) {
+	     for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+	       rowDivs[currentDiv].height(currentTallest);
+	     }
+	     rowDivs.length = 0; // empty the array
+	     currentRowStart = topPostion;
+	     currentTallest = $el.height();
+	     rowDivs.push($el);
+	   } else {
+	     rowDivs.push($el);
+	     currentTallest = (currentTallest < $el.height()) ? ($el.height()) : (currentTallest);
+	  }
+	   for (currentDiv = 0 ; currentDiv < rowDivs.length ; currentDiv++) {
+	     rowDivs[currentDiv].height(currentTallest);
+	   }
+	 });
+	}
+
+	$(window).load(function() {
+	  equalheight('.main article');
+	});
+
+
+	$(window).resize(function(){
+	  equalheight('.main article');
+	});
+
+</script>
+<section class="main">
+  <article>Gally maroon schooner wench provost fathom haul wind parrel chantey brigantine.  </article>
+  <article>Ho six pounders Arr black spot port jib hogshead spirits bilge rat Admiral of the Black. Blow the man down measured fer yer chains hail-shot jolly boat gangway pillage lugsail wherry Jolly Roger Privateer. </article>
+  <article>Lass gangplank bilged on her anchor bring a spring upon her cable rigging lookout Admiral of the Black sheet wench rutters. </article>
+  </section>
+</body>
+</html>

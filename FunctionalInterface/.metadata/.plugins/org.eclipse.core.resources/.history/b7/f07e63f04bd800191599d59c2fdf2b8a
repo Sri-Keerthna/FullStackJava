@@ -1,0 +1,7 @@
+package com.hcl.funinterface;
+
+@FunctionalInterface
+public interface EmployInterface {
+
+	abstract void EmpInterface(int no,String name);
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  border: 1px solid red;
+  padding: 15px;
+  background-color:lightblue;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+</style>
+</head>
+<body>
+
+<div style="background-color:lightgreen;padding:15px;text-align:center;">
+  <h1>Dubai</h1>
+</div>
+
+<div class="row">
+
+<div class="col-4">
+  <h2>Burj Khalifa</h2>
+    <p>The Burj Khalifa, Arabic for "Khalifa Tower", known as the Burj Dubai prior to its inauguration in 2010, is a skyscraper in Dubai, United Arab Emirates. With a total height of 829.8 m (2,722 ft) and a roof height (excluding antenna) of 828 m (2,717 ft), the Burj Khalifa has been the tallest structure and building in the world since its topping out in 2009.</p>
+</div>
+
+<div class="col-4">
+  <h2>Burj Al Arab Jumeirah</h2>
+    <p>The iconic sail-shaped silhoutte of Burj Al Arab Jumeirah stands tall as a beacon of modern Dubai, characterized by the finest hospitality you can ever experience.</p>
+</div>
+<div class="col-4">
+  <h2>Dubai Mall</h2>
+    <p>The Dubai Mall is a shopping mall in Dubai. It is the second-largest mall in the world by total land area, and the 26th-largest shopping mall in the world by  gross leasable area.</p> <h2>Dubai Mall</h2>
+</div>
+</div>
+
+</body>
+</html>

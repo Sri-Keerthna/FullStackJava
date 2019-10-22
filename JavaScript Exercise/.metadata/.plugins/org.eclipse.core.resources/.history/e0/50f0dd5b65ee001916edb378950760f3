@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Email Validation</title>
+<style>
+li {list-style-type: none;
+font-size: 16pt;
+}
+.mail {
+margin: auto;
+padding-top: 10px;
+padding-bottom: 10px;
+width: 400px;
+background : lightorange;
+border: 1px soild silver;
+}
+.mail h4 {
+margin-left: 38px;
+}
+input {
+font-size: 10pt;
+}
+input:focus, textarea:focus{
+background-color: lightyellow;
+}
+input submit {
+font-size: 10pt;
+}
+.rq {
+color: #FF0000;
+font-size: 10pt;
+}
+</style>
+</head>
+<body>
+<script>
+function ValidateEmail(inputText)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(inputText.value.match(mailformat))
+{
+document.form1.text1.focus();
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+document.form1.text1.focus();
+return false;
+}
+}
+
+</script>
+<div class="mail">
+<h4>Type the Email ID</h4>
+<form name="form1" action="#"> 
+<center>
+<ul>
+<li><input type='text' name='text1'/></li>
+<li>&nbsp;</li>
+<li class="submit"><input type="submit" name="submit" value="Submit" onclick="ValidateEmail(document.form1.text1)"/></li>
+<li>&nbsp;</li>
+</ul>
+</center>
+</form>
+</div>
+<script src="email-validation.js"></script>
+</body>
+</html>

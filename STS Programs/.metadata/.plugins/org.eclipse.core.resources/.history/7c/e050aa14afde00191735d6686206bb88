@@ -1,0 +1,26 @@
+package com.sri.service;
+
+import java.util.List;
+
+import com.sri.model.Employee;
+
+public interface EmployeeService {
+
+	public List<Employee> getAllEmployees();
+	
+	public Employee addEmployee(String empStr);
+	
+	public List<Employee> addEmployees();
+	
+	public Employee deleteEmployee(int id);
+	
+	public List<Employee> deleteEmployees();
+	
+	public Employee updateEmployee();
+	
+	public List<Employee> updateEmployees();
+	
+	public Employee getEmployee(int id);
+	
+	public String getEmployeesByName(String name);
+}

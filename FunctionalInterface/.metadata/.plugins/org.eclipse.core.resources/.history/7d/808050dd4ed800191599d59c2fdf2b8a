@@ -1,0 +1,5 @@
+package com.hcl.funinterface;
+
+public interface EmpInf2 {
+
+}

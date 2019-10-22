@@ -1,0 +1,11 @@
+package com.hcl.funinterface;
+
+public class Employeemain {
+
+	public static void main(String[] args) {
+		EmployInterface obj=Employee::new;
+		Employee employee=obj.EmpInterface(22, "HCL");
+		System.out.println(employee.getEmpNo());
+		System.out.println(employee.getEmpName());
+	}
+}

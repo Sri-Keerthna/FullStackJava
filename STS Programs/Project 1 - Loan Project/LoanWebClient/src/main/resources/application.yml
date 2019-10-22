@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: loanwebclient
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+# Discovery server Access
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/
+
+server: 
+  port: 8585
+  
+# Disable Spring Boot's "Whitelabel" default error page,so we can use our own
+error: 
+  whitelabel: 
+    enabled: false

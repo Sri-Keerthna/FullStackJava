@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.hcl.lambda.MyInterface"/>
+<fullyQualifiedTypeName name="com.hcl.lambda.MyFunctionalInterface"/>
+<fullyQualifiedTypeName name="com.hcl.lambda.MyInterfaceWithReturn"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.hcl.lambda.MyMaxInterface"/>
+<fullyQualifiedTypeName name="com.hcl.lambda.MyImplements"/>
+<fullyQualifiedTypeName name="com.hcl.lambda.MyInterfaceImpl"/>
+<fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
+<fullyQualifiedTypeName name="com.hcl.lambda.MultiLambda"/>
+<fullyQualifiedTypeName name="com.hcl.lambda.MultiInterface"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Tue Sep 24 17:01:03 IST 2019
+org.eclipse.jst.jee.server\:EmpSpringBootCRUD=C\:\\Software\\STS 3.9_64\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\EmpSpringBootCRUD
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\coalesce\\.m2\\repository\\org\\springframework\\spring-web\\5.1.9.RELEASE\\spring-web-5.1.9.RELEASE.jar=C\:\\Software\\STS 3.9_64\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\EmpSpringBootCRUD\\WEB-INF\\lib\\spring-web-5.1.9.RELEASE.jar

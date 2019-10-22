@@ -1,0 +1,5 @@
+package com.sri.repository;
+
+public interface EmployeeRepository {
+
+}

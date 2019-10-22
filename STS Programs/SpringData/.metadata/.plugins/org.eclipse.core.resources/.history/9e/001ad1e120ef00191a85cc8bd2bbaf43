@@ -1,0 +1,66 @@
+package com.sri;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedNativeQueries;
+import javax.persistence.NamedNativeQuery;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+
+
+@Entity
+@Table (name="Employ")
+public class Employee {
+	
+	private int Empno;
+	private String Name;
+	private String Dept;
+	private String Desig;
+	private int Basic;
+	
+	@Id
+	@Column (name="Empno")
+	public int getEmpno() {
+		return Empno;
+	}
+	public void setEmpno(int Empno) {
+		this.Empno = Empno;
+	}
+	@Column (name="Name")
+	public String getName() {
+		return Name;
+	}
+	public void setName(String Name) {
+		this.Name = Name;
+	}
+	@Column (name="Dept")
+	public String getDept() {
+		return Dept;
+	}
+	public void setDept(String Dept) {
+		this.Dept = Dept;
+	}
+	@Column (name="Desig")
+	public String getDesig() {
+		return Desig;
+	}
+	public void setDesig(String Desig) {
+		this.Desig = Desig;
+	}
+	@Column (name="Basic")
+	public int getBasic() {
+		return Basic;
+	}
+	public void setBasic(int Basic) {
+		this.Basic = Basic;
+	}
+	@Override
+	public String toString() {
+		return "Employee [Empno=" + Empno + ", Name=" + Name + ", Dept=" + Dept + ", Desig=" + Desig + ", Basic="
+				+ Basic + "]";
+	}
+
+	
+}

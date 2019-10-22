@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Thu Sep 26 15:03:24 IST 2019
+org.eclipse.jst.jee.server\:BankAccountService=C\:\\Software\\STS 3.9_64\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\BankAccountService
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\coalesce\\.m2\\repository\\org\\springframework\\spring-web\\5.1.9.RELEASE\\spring-web-5.1.9.RELEASE.jar=C\:\\Software\\STS 3.9_64\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\BankAccountService\\WEB-INF\\lib\\spring-web-5.1.9.RELEASE.jar

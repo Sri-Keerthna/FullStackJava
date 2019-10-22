@@ -1,0 +1,24 @@
+package com.hcl.java8streams.controller;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.hcl.java8streams.service.EmployeeService;
+
+@Controller("/employee")
+public class EmployeeController {
+
+	private static final Logger logger = Logger
+			.getLogger(EmployeeController.class);
+
+	public EmployeeController() {
+		System.out.println("EmployeeController()");
+	}
+
+	@Autowired
+	private EmployeeService employeeService;
+
+	@RequestMapping(value = "/")
+	
+}

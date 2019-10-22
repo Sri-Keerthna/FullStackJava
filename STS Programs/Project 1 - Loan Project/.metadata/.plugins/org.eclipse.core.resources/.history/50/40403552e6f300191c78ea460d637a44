@@ -1,0 +1,6 @@
+package com.sri;
+
+public interface ClientUserRepository {
+
+	public int login(User user);
+}

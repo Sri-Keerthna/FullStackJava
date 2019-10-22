@@ -1,0 +1,7 @@
+INDEX VERSION 1.131
+D:\MSA\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2748734995.index
+\com.sri.web\src\main\java
+D:\MSA\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1329713527.index
+\bank-webclient\src\main\java
+D:\MSA\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1120537112.index
+\com.doj.web\src\main\java

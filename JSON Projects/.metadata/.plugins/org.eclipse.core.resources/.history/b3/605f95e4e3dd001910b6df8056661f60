@@ -1,0 +1,8 @@
+package com.hcl.model;
+
+public class EmployeeModel {
+
+	public static void main(String[] args) {
+		
+	}
+}

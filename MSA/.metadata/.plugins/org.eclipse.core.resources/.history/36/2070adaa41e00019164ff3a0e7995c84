@@ -1,0 +1,24 @@
+package com.div.demo;
+
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+@Service
+public class AccountServiceImpl implements AccountService{
+	
+	@Autowired
+	AccountRepository accountRepository;
+
+	public void addUser(Account account){  
+		accountRepository.save(account);  
+    }
+
+	@Override
+	public Optional<Account> getUser(Integer userid) {  
+	        return accountRepository.findById(userid);  
+	}
+}

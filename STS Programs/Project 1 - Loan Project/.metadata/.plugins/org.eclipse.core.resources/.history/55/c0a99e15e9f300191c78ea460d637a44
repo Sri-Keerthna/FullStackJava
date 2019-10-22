@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">  
+</head>
+<body>
+    <div class="loginBox">
+			<img src="avatar.png" class="user">
+        <center><h2>Login</h2></center>
+        <form action="authentication" method="post" modelAttribute="user">
+        	
+             <p> UserId</p>
+               <input type="text" name="userid" placeholder="Enter User ID">
+            <p>User Name</p>
+            <input type="text" name="username" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password">
+            <input type="submit" value="Login"> 
+            <a href="/newuser">Register Now</a>  
+            </form>
+        </div>
+    
+    </body>
+</html>

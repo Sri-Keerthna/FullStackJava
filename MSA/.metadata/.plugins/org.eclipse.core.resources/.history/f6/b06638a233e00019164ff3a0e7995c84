@@ -1,0 +1,34 @@
+package com.div.demo;
+
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+
+@Service
+public class AccountServiceImpl implements AccountService{
+	
+	@Autowired
+	AccountRepository accountRepository;
+
+//	@Override
+//	public List<Account> findAccountByUserid() {
+//		List<Account> listAccount=(List<Account>) accountRepository.findAll();
+//		if(listAccount.size()>0) {
+//			return listAccount;
+//		}else {
+//			return new ArrayList<Account>();
+//		}
+//	}
+
+	public void addUser(Account account){  
+		accountRepository.save(account);  
+    }
+
+	@Override
+	public Optional<Account> getUser(Integer userid) {  
+	        return accountRepository.findById(userid);  
+	}
+}

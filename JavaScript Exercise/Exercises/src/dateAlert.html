@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Date Alert</title>
+</head>
+<body>
+ <script>
+var date1 = new Date(2018, 9, 22, 12, 30, 0, 0);
+var date2 = new Date(2019, 9, 22, 12, 30, 0, 0);
+
+var days = (date2 - date1) / 1000 / 60 / 60 / 24;
+if(date1<date2){
+document.write( "remaining days "  + days);
+}
+else{
+alert("Today is the day");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.javacodegeeks.examples.jaxWsAnnotations.webservice.WSAnnotationWebServiceIProxy"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="javax.jws.WebService"/>
+<fullyQualifiedTypeName name="javax.jws.WebMethod"/>
+<fullyQualifiedTypeName name="com.hcl.fault.MissingName"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="com.hcl.soap.HelloProxy"/>
+<fullyQualifiedTypeName name="com.hcl.fault.HelloWorldProxy"/>
+</qualifiedTypeNameHistroy>

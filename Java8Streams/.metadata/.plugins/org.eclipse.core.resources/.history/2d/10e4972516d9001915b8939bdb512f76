@@ -1,0 +1,6 @@
+package com.hcl.java8streams.dao;
+
+public class EmployeeDAOImpl {
+
+	public List<Employee> getAllEmployees(int empNo);
+}

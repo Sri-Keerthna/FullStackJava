@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>pattern 1</title>
+</head>
+<body>
+<!-- Pattern 1 -->
+/**PATTERN 1**/
+<p style="line-height:18px; font-size:10px; font-family:arial;">
+<br>
+<script>
+ var i,j;
+ for (var i = 1; i <= 5; i++) {
+        for (var j = 1; j <= i; j++) {
+           document.write(j+"&nbsp;&nbsp;");
+        }
+        
+        document.write("</br>");
+    }
+    </script>
+    </p>
+    
+    <!-- Pattern 2 -->
+    /**PATTERN 2**/
+    <p style="line-height:18px; font-size:10px; font-family:arial;">
+<br>
+<script>
+ for (var i = 5; i >= 1; i--) {
+        for (var j = 1; j <= i; j++) {
+           document.write(i+"&nbsp;&nbsp;");
+        }
+        
+        document.write("</br>");
+    }
+    </script>
+    </p>
+    
+    <!-- Pattern 3 --> 
+    /**PATTERN 3**/
+    <p style="line-height:18px; font-size:10px; font-family:arial;">
+<br>
+<script>
+ for (var i = 1; i <=5; i++) {
+        for (var j = 5; j >= i; j--) {
+           document.write(j+"&nbsp;&nbsp;");
+        }
+        
+        document.write("</br>");
+    }
+    </script>
+    </p><br/>
+     <!-- Pattern 4 -->
+     /**PATTERN 4**/
+     <p style="line-height:18px; font-size:10px; font-family:arial;">
+<br>
+<script>
+ for (var i = 5; i >=1; i--) {
+        for (var j = 1; j <= i; j++) {
+           document.write(5+"&nbsp;&nbsp;");
+        }
+        
+        document.write("</br>");
+    }
+    </script>
+    </p>
+</body>
+</html>

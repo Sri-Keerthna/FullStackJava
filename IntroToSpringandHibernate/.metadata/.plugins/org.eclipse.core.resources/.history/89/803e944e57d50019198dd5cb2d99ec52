@@ -1,0 +1,18 @@
+package com.jwt.service;
+
+import java.util.List;
+
+import com.jwt.model.Exam;
+
+public interface ExamService {
+	
+	public void addMarks(Exam exam);
+
+	public List<Exam> getAllMarks();
+
+	public void deleteMarks(Integer rollno);
+
+	public Exam getMarks(int rollno);
+
+	public Exam updateMarks(Exam rollno);
+}

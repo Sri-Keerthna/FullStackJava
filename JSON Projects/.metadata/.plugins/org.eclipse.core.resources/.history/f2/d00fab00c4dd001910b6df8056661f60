@@ -1,0 +1,29 @@
+package com.hcl.json;
+
+import java.util.Scanner;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+
+public class JsonArrayScanner {
+
+	public static void main(String[] args) {
+		JSONArray obj=new JSONArray(); 
+		Scanner sc=new Scanner(System.in);
+		for(int i=0;i<1;i++)
+		  {
+		  JSONArray arr1 = new JSONArray();  
+		  System.out.println("enter name :");   
+		  String name=sc.next();   
+		  System.out.println("enter salary :");   
+		  String salary=sc.next(); 
+		  System.out.println("enter age :");   
+		  String age=sc.next(); 
+		  }
+		  
+		JSONObject jsonObject=new JSONObject();
+		jsonObject.put("1", JSONValue.toJSONString(obj));
+		System.out.println(jsonObject.toString());
+	}
+}

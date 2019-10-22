@@ -1,0 +1,13 @@
+package com.sri.EmpSpringBootCRUD;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class EmpSpringBootCrudApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(EmpSpringBootCrudApplication.class, args);
+	}
+
+}

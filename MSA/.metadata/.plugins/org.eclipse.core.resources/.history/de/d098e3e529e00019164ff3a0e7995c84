@@ -1,0 +1,52 @@
+package com.div.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+
+@RestController
+public class AccountController {
+
+	@Autowired
+	AccountRepository accountRepository;
+	
+	@RequestMapping("/account/{userid}")
+	public Account byusername(@PathVariable("userid") Integer userid) {
+		Account userId = accountRepository.findAccountByUserid(userid);
+		return userId;
+	}
+	
+	@PostMapping("/addaccount")
+	public ResponseEntity<String> addAccount(@RequestBody Integer userid) {
+		return new ResponseEntity<String>(accountRepository.addaccount(userid),new HttpHeaders(),HttpStatus.OK);
+	}
+	
+	@PostMapping("/addAll")
+	public ResponseEntity<String> addAccounts(@RequestBody Integer userid) {
+		return new ResponseEntity<String>(accountRepository.addAccounts(userid),new HttpHeaders(),HttpStatus.OK);
+	}
+	
+	@DeleteMapping("/delete/{id}")
+	public ResponseEntity<String> deleteAccount(@PathVariable("id") Integer userid) {
+		return new ResponseEntity<String>(accountRepository.deleteAccount(userid),new HttpHeaders(),HttpStatus.OK);
+	}
+	
+	@PostMapping("/deleteAccounts")
+	public ResponseEntity<String> deleteAccounts(@RequestBody Integer userid) {
+		return new ResponseEntity<String>(accountRepository.deleteAccounts(userid),new HttpHeaders(),HttpStatus.OK);
+	}
+	
+	@PostMapping("/update")
+	public ResponseEntity<String> updateAccount(@RequestBody Integer userid) {
+		return new ResponseEntity<String>(accountRepository.updateAccount(userid),new HttpHeaders(),HttpStatus.OK);
+	}
+}

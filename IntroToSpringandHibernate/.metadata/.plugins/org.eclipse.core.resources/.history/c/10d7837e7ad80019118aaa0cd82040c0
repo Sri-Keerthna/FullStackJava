@@ -1,0 +1,20 @@
+package com.jwt.dao;
+
+import java.util.List;
+
+import com.jwt.model.Exam;
+
+public interface ExamDAO {
+	
+	public void addMarks(Exam exam);
+
+	public List<Exam> getExamBySid(int sid);
+
+	public void deleteMarks(int id);
+
+	public Exam updateMarks(Exam exam);
+
+	public Exam getMarks(int rollno);
+	
+	public void updateFinalScore(int sid);
+}
